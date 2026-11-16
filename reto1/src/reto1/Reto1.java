@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class Reto1 {
 
-    // Comprueba que el texto sea un número entero (con - opcional delante)
     public static boolean esNumero(String texto) {
         int inicio = 0;
         if (texto.length() > 0 && texto.charAt(0) == '-') {
             inicio = 1;
         }
-        // Mínimo 1 dígito y máximo 9 para que quepa en un int
         if (texto.length() - inicio < 1 || texto.length() - inicio > 9) {
             return false;
         }
@@ -22,7 +20,6 @@ public class Reto1 {
         return true;
     }
 
-    // Pide un número hasta que el usuario escribe uno válido
     public static int pedirNumero(Scanner sc, String mensaje) {
         String texto;
         do {
@@ -61,7 +58,7 @@ public class Reto1 {
             if (esNumero(texto)) {
                 opcion = Integer.parseInt(texto);
             } else {
-                opcion = -1; // no es un número: opción incorrecta
+                opcion = -1;
             }
 
             switch (opcion) {
