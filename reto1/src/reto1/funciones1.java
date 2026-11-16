@@ -16,7 +16,7 @@ public class funciones1 {
 
     public static int dividir(int a, int b) {
         if (b == 0) {
-            throw new ArithmeticException("No se puede dividir entre cero");
+        	System.out.println("No se puede dividir entre cero");
         }
         return a / b;
     }
