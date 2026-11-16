@@ -14,9 +14,10 @@ public class funciones1 {
         return a * b;
     }
 
+    // Si b es 0 no se divide y se devuelve 0
     public static int dividir(int a, int b) {
         if (b == 0) {
-            throw new ArithmeticException("No se puede dividir entre cero");
+            return 0;
         }
         return a / b;
     }
